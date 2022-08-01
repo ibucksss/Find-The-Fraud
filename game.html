@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTF</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="game-wrapper">
+    <h1 class="title">find the fraud</h1>
+
+            <h5 id="start-directions" class="hidden">Pass the device around the table and each player click on your name while hiding the device to find out your secret role.</h5>
+        <h1 id="add-player-text" class="add-player-text">Add Players</h1>
+    <div class="form-wrapper" id="form-wrap">
+    <form id="form" class="form">
+        <div class="input-wrapper" id="input-wrapper">
+        <input type="text" class="input" id="input" placeholder="Enter player names">
+    </div>
+        <ul class="names" id="names">
+
+        </ul>
+    </form>
+    <h5 id="player-add-directions" class="player-add-directions" >Click on an added player to delete them. Click Go when all players have been added</h5>
+    <button id="nameSub" class="btn name-submit">Go</button>
+    <h5 id="negative-submit" class="negative-submit hidden">At least 3 players required to play!</h5>
+</div>
+    <div class="choice-btn-wrapper" id="choice-btn-wrapper">
+    <button class="choice-btn hidden" id="start-btn">Looks Good!</button>
+    <button class="choice-btn hidden" id="edit-players-btn">Edit Players</button>
+    <button id="round-start" class="hidden round-start btn">Start Round</button>
+    </div>
+    <div class="catagory-wrapper hidden" id="catagory-wrapper">
+    <h1>Catagory</h1>
+    <h2 id="catagory-word" class="catagory-word"></h2>
+    </div>
+    <div class="gameplay-wrapper">
+        <button class="hidden artist-caught-btn btn" id="artist-caught-btn">Fake Artist was Caught</button>
+        <button class="hidden artist-not-caught-btn btn" id="artist-not-caught-btn">Artist was not caught</button>
+        <h2 class="hidden" id="artist-guess-word">Fake Artist, you have 15 seconds to guess the secret word.</h2>
+        <button class="hidden fartist-correct btn" id="fartist-correct-btn">Fake Artist correctly guessed word</button>
+        <button class="hidden fartist-incorrect btn" id="fartist-incorrect-btn">Fake Artist incorrectly guessed word</button>
+    </div>
+    <div class="current-score-wrapper hidden" id="current-score-wrapper">
+        <h2 id="current-score-text" class="hidden">Current Scores</h2>
+        <ul class="current-scores" id="current-score">
+        </ul>
+    </div>
+    <button id="next-round-btn" class="btn next-round-btn hidden">Next Round</button>
+    <div class="winner-screen-wrapper">
+        <h2 class="hidden" id="tie">There was a tie. Tied players: </h2>
+        <h2 class="hidden" id="winner">The winner is:  </h2>
+    <h3 class="hidden" id="winner-screen"></h3>
+    </div>
+    <button id="replay-button" class="hidden btn">Play Again</button>
+</div>
+</div>
+
+ <div class="real-artist hidden" id="real-artist">
+    <h1>You are real!</h1>
+    <h2>The word is:</h2>
+    <h2 class="secretWord" id="htmlWord"></h2>
+</div>
+<div class="fake-artist hidden" id="fake-artist">
+    <h1>You are fake!</h1>
+    <h2>Try your best to blend in.</h2>
+</div>
+
+<button id="artist-btn" class="artist-btn hidden">Close</button>
+   <script src="script.js"></script>
+</body>
+</html>
